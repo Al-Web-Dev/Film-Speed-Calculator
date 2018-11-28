@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width">
+	<title>Film Speed Calculator</title>
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Trocchi" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+	<!-- http://javascriptbook.com/code/c13/validation.html link to what this style is based on.. -->
+
+	<script type="text/javascript">
+		
+		function playBackSpeed() {
+
+		var timeLSpeed = document.getElementById('timeLSpeed').value;
+		var sFSpeed = document.getElementById('sFSpeed').value;
+		var playBackPercentage = timeLSpeed / sFSpeed * 100;
+		var num = playBackPercentage.toFixed(2);
+
+
+		document.getElementById('result').value = num;
+
+		}
+	</script>
+
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-4 col-Style">
+			<img src="images/film.jpg">
+			<form>
+				<h1>Calculate film playback speed...</h1>
+				<p>Use this application to work out what the percentage play back should be in your editing software.</p>
+				<label for="number">Timeline fps:</label>
+				<input id="timeLSpeed" type="number" name="enterNumber" placeholder="Enter Timeline speed">
+				<label for="number">Source Footage fps:</label>
+				<input id="sFSpeed" type="number" name="enterNumber" placeholder="Enter Timeline speed" ><br>
+				<div>
+					<button onclick="playBackSpeed();">Calculate</button><br>
+					<input id="result" type="number" name="enterNumber" placeholder="0.00" step="0.01">
+				</div>
+
+			</form>
+		</div>
+	</div> <!-- close row -->
+</div>
+
+</body>
+</html>

@@ -20,6 +20,10 @@ form, label p {
 	display: block;
 }
 
+.tableCalc {
+	margin-top: 111px;
+}
+
 input {
 	width: auto;
 	box-shadow: inset 0 2px 2px #000;
@@ -67,20 +71,66 @@ button {
 
 .col-Style {
 	background-color: #f8584a;
-	width: 268px;
 	text-align: center;
 	color: #fff;
-	margin: 10px auto 0 auto;
+	margin: 50px auto 0 auto;
 	padding: 40px;
 	border: 8px solid #fff;
 	border-radius: 7px;
 }
 
+div .filmSpinner-container {
+	position: relative;
+    display: inline-block;
+    left: -74px;
+}
+
 div .col-Style img {
-	width: 140px;
-	height: auto;
+	
 	border-radius: 7px;
 }
+
+div .imageWrapper {
+	position: relative;
+
+}
+
+.outerImage {
+	width: 140px;
+	height: auto;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	text-align: center;
+	z-index: 2;
+
+}
+
+ .innerImage {
+
+    width: 131px;
+    height: auto;
+    position: relative;
+    top: 2px;
+    z-index: 3;
+}
+
+#spin  {
+	/*-webkit-animation-play-state: paused;*/
+	-webkit-animation:  rotation 1s  linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(90deg);
+		}
+}
+
+
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}

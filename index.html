@@ -23,30 +23,48 @@
 		document.getElementById('result').value = num;
 
 		}
+
+		function ani(){
+
+	    document.getElementById('spin').className ='innerImage';
+
+	  	}
+
 	</script>
 
 </head>
 <body>
 
 <div class="container">
-	<div class="row">
-		<div class="col-4 col-Style">
-			<img src="images/film.jpg">
-			<form>
-				<h1>Calculate film playback speed...</h1>
-				<p>Use this application to work out what the percentage play back should be in your editing software.</p>
-				<label for="number">Timeline fps:</label>
-				<input id="timeLSpeed" type="number" name="enterNumber" placeholder="Enter Timeline speed">
-				<label for="number">Source Footage fps:</label>
-				<input id="sFSpeed" type="number" name="enterNumber" placeholder="Enter Timeline speed" ><br>
-				<div>
-					<button onclick="playBackSpeed();">Calculate</button><br>
-					<input id="result" type="number" name="enterNumber" placeholder="0.00" step="0.01">
-				</div>
 
-			</form>
+		<div class="col-4 col-Style">
+			<div class="filmSpinner-container">
+				<div class="imageWrapper">
+					<div class="outerImage">
+						<img class="outerImage" src="images/outerReel2.png">
+							<div class="innerImage">
+								<img id="spin" class="innerImage" src="images/innerReel2.png">
+							</div>
+					</div>
+				</div> 
+			</div>
+
+			<div class="tableCalc">
+				<form>
+					<br><h1>Calculate film playback speed...</h1>
+					<p>Use this application to work out what the percentage play back should be in your editing software.</p>
+					<label for="number">Timeline fps:</label>
+					<input id="timeLSpeed" type="number" name="enterNumber" placeholder="Enter Timeline speed">
+					<label for="number">Source Footage fps:</label>
+					<input id="sFSpeed" type="number" name="enterNumber" placeholder="Enter Timeline speed" step="any" ><br>
+					<div>
+						<button type="button" onclick="playBackSpeed(); ani();">Calculate</button><br>
+						<input id="result" type="number" name="enterNumber" placeholder="0.00" >
+					</div>
+				</form>
+			</div>
 		</div>
-	</div> <!-- close row -->
+
 </div>
 
 </body>
